@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Disappering Muffin</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('img').click(function() {
+                var ninja = $(this).attr('src')
+                var cat = $(this).attr('alt')
+
+                $(this).attr('src', function() {
+                    $(this).attr('alt', function() {
+                        return ninja;
+                    })
+                    return cat;
+                });
+            });
+        });
+    </script>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <img src="template/ninja0.png" alt="template/cat0.png" />
+        <img src="template/ninja1.png" alt="template/cat1.png" />
+        <img src="template/ninja2.png" alt="template/cat2.png" />
+        <img src="template/ninja3.png" alt="template/cat3.png" />
+        <img src="template/ninja4.png" alt="template/cat4.png" />
+
+    </div>
+
+</body>
+
+</html>
